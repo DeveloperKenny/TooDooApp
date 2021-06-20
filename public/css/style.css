@@ -1,0 +1,95 @@
+.container {
+    max-width: 980px;
+}
+
+.row-nav {
+    margin-top: 1%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    background-color: #3658BF;
+    
+}
+.title {
+    color: #fff;
+    font-size: 1.5vw;
+    margin-top: 10%;
+    margin-left: 8%;
+}
+
+.col-date {
+    margin-top: 2.5%;
+    text-align: center;
+    font-size: 1.5vw;
+    font-weight: 650;
+    color: #fff;
+}
+
+.btn-signin {
+    color: #fff;
+    padding-top: 15%;
+    padding-bottom: 15%;
+}
+
+.title-signin {
+
+    margin-top: 15%;
+    font-size: 3.5vw;
+    text-align: center;
+}
+
+.form-signin {
+    margin-top: 15%;
+    font-size: 1.15vw;
+}
+
+.div-error {
+    margin-top: 15%;
+}
+
+.btn-signOut {
+    display: none;
+    margin-top: 15.5%;
+    color: #fff;
+    font-weight: 600;
+}
+
+.form-signin {
+    display: block;
+}
+
+
+
+
+
+@media only screen and (min-width: 412px ) and (max-width: 896px) {
+
+    .title {
+        color: #fff;
+        font-size: 3.5vw;
+        margin-top: 25%;
+        margin-bottom: 25%;
+        margin-left: 5%;
+    }
+
+    .col-date {
+        margin-top: 6.5%;
+        font-size: 3.5vw;
+        color: #fff;
+    }
+
+    .title-signin {
+        margin-top: 5%;
+        text-align: center;
+    }
+
+    .form-signin {
+        margin-top: 15%;
+        font-size: 3.5vw;
+        font-weight: 600;
+    }
+    .title-signin {
+        font-size: 4.5vw;
+        font-weight: 650;
+    }
+
+}
