@@ -1,4 +1,16 @@
-
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyC-hWu-NQ0LnlEM43w_T0GX50yxFlxH_uo",
+    authDomain: "personaltoodo.firebaseapp.com",
+    projectId: "personaltoodo",
+    storageBucket: "personaltoodo.appspot.com",
+    messagingSenderId: "433868468312",
+    appId: "1:433868468312:web:c746ee1764de2d89999a2d",
+    measurementId: "G-N3L8QC88ZE"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig)
 
      // make auth and firestore references
      const auth = firebase.auth();
@@ -11,6 +23,10 @@
 const formSignIn = document.querySelector('.form-signin');
 const divError = document.querySelector('.div-error');
 const signOutBtn = document.querySelector('.btn-signOut');
+const addBtn = document.querySelector('.btn-add');
+const todoTitle = document.querySelector('.title');
+const formAddTask = document.querySelector('.form-add-new-task');
+const modalHide = document.querySelector('.modal');
 
 
         function myDataID(selectedID) {
@@ -40,6 +56,9 @@ const signOutBtn = document.querySelector('.btn-signOut');
                                 signOutBtn.style.display = 'block';
                                 formSignIn.style.display = "none";
                                 cardRenederDiv.style.display = "block";
+                                addBtn.style.display = "block";
+                                todoTitle.style.display = "none";
+
                     })
                     .catch(err => {
                         divError.innerHTML = err.message;
@@ -56,6 +75,8 @@ const signOutBtn = document.querySelector('.btn-signOut');
                                         signOutBtn.style.display = 'none';
                                         formSignIn.style.display = "block";
                                         cardRenederDiv.style.display = "none";
+                                        addBtn.style.display = "none";
+                                        todoTitle.style.display = "block";
                                     })
 
                     })
@@ -70,9 +91,29 @@ const signOutBtn = document.querySelector('.btn-signOut');
                                         setupCard(snapshot.docs);
                                     })
                                 
+                                    formAddTask.addEventListener('submit', (e) => {
+
+                                            e.preventDefault();
+
+                                                const newTitle = formAddTask['task-title'].value;
+                                                const newNote = formAddTask['task-note'].value;
+
+                                            //   console.log("title: ", newTitle);
+                                             //   console.log("note: ", newNote);
+
+                                             db.collection('personal').add({
+                                                title: newTitle,
+                                                note: newNote,
+                                                status: false,
+                                            })
+                                             .then(() => {
+                                                    formAddTask.reset();
+                                            })
+
+                                    })
                     
                                 
-                            }
+                                    }
                     })
 
             

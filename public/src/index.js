@@ -31,20 +31,14 @@ const  cardRenederDiv = document.querySelector('.card-render-here');
                     
                     const info = doc.data();
                   const card = `
-                    <div class="card text-center">
-                    <div class="card-header">
-                      Personal
-                    </div>
-                    <div class="card-body">
-                      <h5 class="card-title">${info.title}</h5>
-                      <p class="card-text">${info.note}</p>
-                      <button class="btn btn-primary" data-id="${doc.id}" onclick="myDataID(this)">Completed Task</button>
-                    </div>
-                    <div class="card-footer text-muted">
-                      2 days ago
-                    </div>
-                  </div>
-                  `;
+                                  <div class="card card-todo">
+                                    <div class="card-title">${info.title}</div>
+                                  <div class="card-body card-body-note">
+                                    <p>${info.note}</p>
+                                    <div class="btn btn-primary btn-completed" onclick="myDataID(this)" data-id=${doc.id} >Completed Task</div>
+                                  </div>
+                                </div>
+                              `;
                   html += card;
                 })
                 cardRenederDiv.innerHTML = html;

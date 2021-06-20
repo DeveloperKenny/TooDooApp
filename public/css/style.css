@@ -16,6 +16,36 @@
     margin-left: 8%;
 }
 
+.card-title {
+    margin-left: 2%;
+    margin-top: 2%;
+    text-transform: capitalize;
+    font-size: 5.5vw;
+    font-weight: 550;
+}
+
+.card {
+    margin-top: 5%;
+}
+
+.card-todo {
+    border-left-color:#038C4C;
+    border-left-width: 10px;
+}
+
+.card-body-note {
+    margin-left: 5%;
+}
+
+.btn-completed {
+    float: right;
+}
+
+.btn-add {
+    display: none;
+    color: #fff;
+}
+
 .col-date {
     margin-top: 2.5%;
     text-align: center;

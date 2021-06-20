@@ -18,6 +18,7 @@
         <div class="row row-nav sticky-top">
           <div class="col-4">
             <div class="title">Too Doo</div>
+              <button class="btn btn-add" data-bs-toggle="modal" data-bs-target="#modalAdd">Add Task</button>
           </div>
           <div class="col-4 col-date">
             <!--Display current date-->
@@ -28,6 +29,31 @@
             </div>
         </div>
 
+        <!-- Modal -->
+                  <div class="modal fade" id="modalAdd" tabindex="1" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLabel">Add New Task</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                          <form class="form-add-new-task">
+                          <div class="mb-3">
+                            <label class="form-label">Title</label>
+                            <input type="text" class="form-control" id="task-title" name="task-title">
+                          </div>
+                          <div class="mb-3">
+                            <label class="form-label">Note</label>
+                            <textarea class="form-control" id="task-note" rows="5"></textarea>
+                          </div>
+                          <button class="btn btn-primary btn-form-add">Add</button>
+                          </form>
+                        </div>
+                       </div>
+                      </div>
+                    </div>
+                  
         <div class="card-render-here"></div>
         <div class="form-render-here">
        <!-- <div class="title-signin">Please Sign In</div> -->
